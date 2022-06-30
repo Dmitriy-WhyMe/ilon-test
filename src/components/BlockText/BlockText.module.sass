@@ -1,0 +1,77 @@
+.block
+    display: flex
+    align-items: center
+    justify-content: center
+    max-width: 185px
+    width: 100%
+    height: 185px
+    background: linear-gradient(120deg, transparent, #ffffff16 200%)
+    @media(max-width: 819px)
+        max-width: 175px
+        height: 175px
+    @media(max-width: 767px)
+        max-width: 145px
+        height: 145px
+    @media(max-width: 374px)
+        max-width: 125px
+        height: 125px
+    &:nth-child(1)
+        &:hover
+            border-top: 1.5px solid #ffffff00
+            border-left: 1.5px solid #ffffff00
+            border-right: 1.5px solid #ffffff3b
+            border-bottom: 1.5px solid #ffffff3b
+            background: linear-gradient(120deg, transparent, #ffffff57 200%)
+            .text
+                opacity: 1
+    &:nth-child(2)
+        &:hover
+            border-top: 1.5px solid #ffffff00
+            border-right: 1.5px solid #ffffff00
+            border-left: 1.5px solid #ffffff3b
+            border-bottom: 1.5px solid #ffffff3b
+            background: linear-gradient(190deg, transparent, #ffffff57 200%)
+            .text
+                opacity: 1
+    &:nth-child(3)
+        &:hover
+            border-bottom: 1.5px solid #ffffff00
+            border-left: 1.5px solid #ffffff00
+            border-right: 1.5px solid #ffffff3b
+            border-top: 1.5px solid #ffffff3b
+            background: linear-gradient(120deg, transparent, #ffffff57 200%)
+            .text
+                opacity: 1
+    &:nth-child(4)
+        &:hover
+            border-bottom: 1.5px solid #ffffff00
+            border-right: 1.5px solid #ffffff00
+            border-left: 1.5px solid #ffffff3b
+            border-top: 1.5px solid #ffffff3b
+            background: linear-gradient(290deg, transparent, #ffffff57 200%)
+            .text
+                opacity: 1
+    
+        
+    .text
+        opacity: 0.7
+        .topText
+            font-size: 16px
+            font-weight: 100
+            color: white
+            text-align: center
+            margin-bottom: 20px
+        .bottomText
+            font-size: 16px
+            font-weight: 100
+            color: white
+            text-align: center
+        .count
+            font-size: 60px
+            font-weight: 700
+            color: white
+            text-align: center
+            line-height: 72%
+            margin-bottom: 10px
+            @media(max-width: 767px)
+                font-size: 45px

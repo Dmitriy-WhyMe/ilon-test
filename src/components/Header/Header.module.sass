@@ -1,0 +1,158 @@
+.row
+    height: 100px
+    width: 100%
+    justify-content: center
+    display: flex
+    align-items: center
+    background: #150a0175
+    border-top: 1px solid #b1b1b152
+    border-bottom: 1px solid #b1b1b152
+    @media(max-width: 767px)
+        height: 65px
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        max-width: 1170px
+        width: 100%
+        padding: 0
+        margin: 0 auto
+        position: relative
+        @media(max-width: 1279px)
+            padding: 0 15px
+        .menuBar
+            display: none
+        .menuIcon
+            font-size: 20px
+            color: white
+            cursor: pointer
+            display: none
+            &:hover
+                color: #b1b1b1
+            @media(max-width: 1023px)
+                display: initial
+        .menuIcon,
+        .menuIcon:before,
+        .menuIcon:after
+            position: absolute
+            top: 50%
+            right: 20px
+            height: 4px
+            width: 30px
+            background: white
+            -webkit-transition: all 0.25s
+            transition: all 0.25s
+            &:hover
+                background: #b1b1b1
+        .menuIcon:before
+            content: ''
+            top: -10px
+            left: 0
+        .menuIcon:after
+            content: ''
+            top: 10px
+            left: 0
+        .menuBar:checked ~ .menuIcon
+            height: 0
+            background: inherit
+            -webkit-transition: all 0.5s
+            transition: all 0.5s
+        .menuBar:checked ~ .menuIcon:before
+            transform: rotate(-45deg)
+            top: 0
+            -webkit-transition: all 0.5s
+            transition: all 0.5s
+        .menuBar:checked ~ .menuIcon:after
+            top: 0
+            transform: rotate(45deg)
+            -webkit-transition: all 0.5s
+            transition: all 0.5s
+    .logoWrap
+        max-width: 315px
+        width: 100%
+        height: 100px
+        display: inline-block
+        position: relative
+        border-left: 1px solid #b1b1b152
+        border-right: 1px solid #b1b1b152
+        transition: all .3s ease
+        border: 1px solid white
+        background-color: #ffffff00
+        @media(max-width: 767px)
+            max-width: 245px
+            padding: 0 10px
+            height: 65px
+        &::after, &::before
+            content: ""
+            display: block
+            border: 1px solid rgb(69 61 62)
+            z-index: 1
+            position: absolute
+        &::after
+            left: -1px
+            top: 7px
+            right: -1px
+            bottom: 7px
+            border-top: none
+            border-bottom: none
+        &::before  
+            left: 7px
+            top: -1px
+            right: 7px
+            bottom: -1px
+            border-left: none
+            border-right: none
+        a
+            z-index: 2
+            position: relative
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            img
+                @media(max-width: 767px)
+                    max-width: 100%
+    .menu
+        display: flex
+        align-items: center
+        gap: 38px
+        @media(max-width: 1279px)
+            gap: 20px
+        @media(max-width: 1023px)
+            max-height: 650px
+            overflow: auto
+            position: absolute
+            top: 100%
+            left: 0
+            right: 0
+            background: black
+            border-bottom: 1px solid rgba(177, 177, 177, 0.3215686275)
+            display: none
+            z-index: 99999
+        li a
+            color: white
+            font-weight: 300
+            font-size: 16px
+            position: relative
+            transition: all 0.5s ease
+            @media(max-width: 1023px)
+                padding-left: 15px
+                line-height: 200%
+            &::after
+                transition: all 0.5s ease
+                content: ''
+            &:hover
+                color: #b1b1b1
+                &::after
+                    bottom: -10px
+                    position: absolute
+                    height: 1px
+                    width: 100%
+                    left: 0
+                    background: #b1b1b1
+                    @media(max-width: 1023px)
+                        content: none
+
+@media(max-width: 1023px)
+    .menuBar:checked ~ .menu
+        display: initial
